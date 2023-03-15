@@ -6,6 +6,7 @@ import { Stats, StatsItem } from "./stats"
 import { useColorScheme } from "../hooks/use-color-scheme"
 import * as styles from "./app.css"
 import "../styles/global.css"
+import Box from "../ui/Box/Box"
 
 const App: React.FC = () => {
   const scheme = useColorScheme()
@@ -15,7 +16,7 @@ const App: React.FC = () => {
   return (
     <div className={clsx(schemeClass, styles.wrapper)}>
       <main className={styles.innerWrapper}>
-        <div className={styles.topBar}>
+        <Box display={`flex`} justifyContent={`space-between`} alignItems={`center`} marginBottom={`lg`}>
           <div className={styles.topBarHeading[scheme]}>Last 30 Days</div>
           <button
             type="button"
@@ -24,7 +25,7 @@ const App: React.FC = () => {
           >
             Toggle Variant
           </button>
-        </div>
+        </Box>
         <Stats variant={variant}>
           <StatsItem label="Total Subscribers" from={70.946} to={71.897} percentage={12} />
           <StatsItem label="Avg. Open Rate" from={56.14} to={58.16} percentage={2.02} />
