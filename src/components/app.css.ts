@@ -19,13 +19,6 @@ export const innerWrapper = style({
   padding: vars.space.lg,
 })
 
-export const topBar = style({
-  display: `flex`,
-  justifyContent: `space-between`,
-  alignItems: `center`,
-  marginBottom: vars.space.lg,
-})
-
 export const button = style({
   border: `none`,
   background: `none`,
